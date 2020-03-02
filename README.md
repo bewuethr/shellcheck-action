@@ -1,7 +1,9 @@
 # shellcheck-action
 
 This action runs [shellcheck][1] on every file containing shell code in the
-repository.
+repository. To determine if a file is a shell script, the output of `file` is
+checked for the string `shell script`, which covers POSIX sh, Bash, Korn shell
+and more.
 
 [1]: https://github.com/koalaman/shellcheck
 
