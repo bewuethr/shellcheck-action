@@ -1,0 +1,9 @@
+name: 'Run shellcheck'
+author: 'Benjamin Wuethrich'
+description: 'Run shellcheck on all shell files'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'terminal'
+  color: 'green'
