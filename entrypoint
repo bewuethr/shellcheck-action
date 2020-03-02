@@ -1,6 +1,10 @@
 #!/bin/sh
 
 find . \
+	-type d \
+	-name '.git' \
+	-prune \
+	-o \
 	-type f \
 	-exec sh -c 'file --brief "$1" | grep -qw "shell script"' _ {} \; \
-	-exec shellcheck {} +
+	-exec shellcheck --color=always {} +
