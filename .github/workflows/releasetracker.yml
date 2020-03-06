@@ -1,0 +1,17 @@
+name: 'Update major and minor version moving tags'
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+
+jobs:
+  update-release-tags:
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: 'Check out code'
+      uses: 'actions/checkout@v2'
+    - name: 'Update release tags for latest major and minor releases'
+      uses: 'bewuethr/release-tracker-action@v0'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
