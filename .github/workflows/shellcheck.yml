@@ -9,4 +9,4 @@ jobs:
     - name: 'Check out code'
       uses: 'actions/checkout@v2'
     - name: 'Run shellcheck'
-      uses: 'bewuethr/shellcheck-action@v0'
+      uses: 'bewuethr/shellcheck-action@v1'
