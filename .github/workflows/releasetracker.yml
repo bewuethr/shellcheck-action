@@ -1,4 +1,4 @@
-name: 'Update major and minor version moving tags'
+name: 'Move release tags'
 
 on:
   push:
