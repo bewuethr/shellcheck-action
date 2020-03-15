@@ -42,8 +42,8 @@ and
 uses: 'bewuethr/shellcheck-action@v1.1.2'
 ```
 
-will fetch v1.1.2. The advantage of using just `@v1` is that minor releases and
-patches are included without requiring a change; the advantage of using
+will fetch `v1.1.2`. The advantage of using just `@v1` is that minor releases
+and patches are included without requiring a change; the advantage of using
 `@v1.1.2` is knowing that the action does 100% the same thing every time.
 
 This is done via the [release-tag-tracker][2] action.
