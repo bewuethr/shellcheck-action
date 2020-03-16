@@ -1,6 +1,6 @@
-name: 'Run shellcheck'
+name: 'Run ShellCheck'
 author: 'Benjamin Wuethrich'
-description: 'Run shellcheck on all shell files'
+description: 'Run ShellCheck on all shell files'
 runs:
   using: 'docker'
   image: 'Dockerfile'

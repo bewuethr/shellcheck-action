@@ -3,7 +3,7 @@
 ![Linting](https://github.com/bewuethr/shellcheck-action/workflows/Linting/badge.svg)
 ![Move release tags](https://github.com/bewuethr/shellcheck-action/workflows/Move%20release%20tags/badge.svg)
 
-This action runs [shellcheck][1] on every file containing shell code in the
+This action runs [ShellCheck][1] on every file containing shell code in the
 repository. To determine if a file is a shell script, the output of `file` is
 checked for the string `shell script`, which covers POSIX sh, Bash, Korn shell
 and more.
