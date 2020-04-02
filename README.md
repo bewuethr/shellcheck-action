@@ -20,7 +20,7 @@ Additionally, files with the extensions `.sh`, `.bash` and `.ksh` are checked.
 ## Example usage
 
 ```yml
-uses: 'bewuethr/shellcheck-action@v1'
+uses: 'bewuethr/shellcheck-action@v2'
 ```
 
 ## Versions
