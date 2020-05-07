@@ -20,7 +20,7 @@ Additionally, files with the extensions `.sh`, `.bash` and `.ksh` are checked.
 ## Example usage
 
 ```yml
-uses: 'bewuethr/shellcheck-action@v2'
+uses: bewuethr/shellcheck-action@v2
 ```
 
 ## Versions
@@ -34,19 +34,19 @@ patch release can be used.
 For example: if the latest release is `v2.1.2`,
 
 ```yml
-uses: 'bewuethr/shellcheck-action@v2'
+uses: bewuethr/shellcheck-action@v2
 ```
 
 and
 
 ```yml
-uses: 'bewuethr/shellcheck-action@v2.1'
+uses: bewuethr/shellcheck-action@v2.1
 ```
 
 and
 
 ```yml
-uses: 'bewuethr/shellcheck-action@v2.1.2'
+uses: bewuethr/shellcheck-action@v2.1.2
 ```
 
 will fetch `v2.1.2`. The advantage of using just `@v2` is that minor releases
