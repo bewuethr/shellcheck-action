@@ -1,4 +1,4 @@
-name: Linting
+name: Lint code base
 
 on:
   push:
@@ -9,48 +9,41 @@ on:
 
 jobs:
 
-  yamllint:
-    runs-on: ubuntu-latest
+  super-linter:
+    name: Lint code base
+    runs-on: ubuntu-20.04
     steps:
 
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Get yamllint config file from dotfiles
-        env:
-          # yamllint disable-line rule:line-length
-          CONFIG_FILE: https://raw.githubusercontent.com/bewuethr/dotfiles/master/.config/yamllint/config
-        run: curl "$CONFIG_FILE" > .github/workflows/yamllintconfig
-
-      - name: Run YAML linter
-        uses: bewuethr/yamllint-action@v1
+      - name: Check out repository
+        uses: actions/checkout@v2.3.4
         with:
-          config-file: .github/workflows/yamllintconfig
+          fetch-depth: 0
 
-  markdownlint:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Get mdl style file from dotfiles
+      - name: Lint code base
+        uses: github/super-linter/slim@v4.8.1
         env:
-          # yamllint disable-line rule:line-length
-          STYLE_FILE: https://raw.githubusercontent.com/bewuethr/dotfiles/master/.config/mdl/style.rb
-        run: curl "$STYLE_FILE" > .github/workflows/style.rb
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: main
+          VALIDATE_ALL_CODEBASE: true
 
-      - name: Run Markdown linter
-        uses: bewuethr/mdl-action@v1
-        with:
-          style-file: .github/workflows/style.rb
+          VALIDATE_BASH: true
+          VALIDATE_BASH_EXEC: true
+          VALIDATE_DOCKERFILE: true
+          VALIDATE_DOCKERFILE_HADOLINT: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GITLEAKS: true
+          VALIDATE_JSCPD: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_SHELL_SHFMT: true
+          VALIDATE_YAML: true
 
   shellcheck:
-    runs-on: ubuntu-latest
+    name: Run shellcheck
+    runs-on: ubuntu-20.04
     steps:
 
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
 
       - name: Run shellcheck
         uses: bewuethr/shellcheck-action@v2
