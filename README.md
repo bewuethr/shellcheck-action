@@ -1,7 +1,12 @@
 # shellcheck-action
 
-![Linting](https://github.com/bewuethr/shellcheck-action/workflows/Linting/badge.svg)
-![Move release tags](https://github.com/bewuethr/shellcheck-action/workflows/Move%20release%20tags/badge.svg)
+[![Lint code base][lintbadge]][lintworkflow]
+[![Update release tags][tagbadge]][tagworkflow]
+
+[lintbadge]:    <https://github.com/bewuethr/shellcheck-action/actions/workflows/lint.yml/badge.svg>
+[lintworkflow]: <https://github.com/bewuethr/shellcheck-action/actions/workflows/lint.yml>
+[tagbadge]:     <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml/badge.svg>
+[tagworkflow]:  <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml>
 
 This action runs [ShellCheck] on every file containing shell code in the
 repository.
