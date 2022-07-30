@@ -3,8 +3,8 @@
 [![Lint code base][lintbadge]][lintworkflow]
 [![Update release tags][tagbadge]][tagworkflow]
 
-[lintbadge]:    <https://github.com/bewuethr/shellcheck-action/actions/workflows/lint.yml/badge.svg>
-[lintworkflow]: <https://github.com/bewuethr/shellcheck-action/actions/workflows/lint.yml>
+[lintbadge]:    <https://github.com/bewuethr/shellcheck-action/actions/workflows/linter.yml/badge.svg>
+[lintworkflow]: <https://github.com/bewuethr/shellcheck-action/actions/workflows/linter.yml>
 [tagbadge]:     <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml/badge.svg>
 [tagworkflow]:  <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml>
 
