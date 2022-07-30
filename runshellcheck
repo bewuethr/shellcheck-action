@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# shellcheck disable=SC1004
-
 find . \
 	-type d -name '.git' -prune \
 	-o \
