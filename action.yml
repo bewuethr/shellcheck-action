@@ -1,9 +1,17 @@
 name: Run ShellCheck
+
 author: Benjamin Wuethrich
+
 description: Run ShellCheck on all shell files
-runs:
-  using: docker
-  image: Dockerfile
+
 branding:
   icon: terminal
   color: green
+
+runs:
+  using: composite
+  steps:
+    - name: Run ShellCheck
+      shell: bash
+      run: |
+        "$GITHUB_ACTION_PATH/runshellcheck"
