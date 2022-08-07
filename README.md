@@ -2,11 +2,14 @@
 
 [![Lint code base][lintbadge]][lintworkflow]
 [![Update release tags][tagbadge]][tagworkflow]
+[![Add issues to project][addbadge]][addworkflow]
 
 [lintbadge]:    <https://github.com/bewuethr/shellcheck-action/actions/workflows/linter.yml/badge.svg>
 [lintworkflow]: <https://github.com/bewuethr/shellcheck-action/actions/workflows/linter.yml>
 [tagbadge]:     <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml/badge.svg>
 [tagworkflow]:  <https://github.com/bewuethr/shellcheck-action/actions/workflows/releasetracker.yml>
+[addbadge]:     <https://github.com/bewuethr/shellcheck-action/actions/workflows/addtoproject.yml/badge.svg>
+[addworkflow]:  <https://github.com/bewuethr/shellcheck-action/actions/workflows/addtoproject.yml>
 
 This action runs [ShellCheck] on every file containing shell code in the
 repository.
