@@ -36,19 +36,10 @@ uses: bewuethr/shellcheck-action@v2
 To get the latest version of a major release, the major release without minor
 and patch release can be used.
 
-To get the latest version of a minor release, the minor release without the
-patch release can be used.
-
 For example: if the latest release is `v2.1.2`,
 
 ```yml
 uses: bewuethr/shellcheck-action@v2
-```
-
-and
-
-```yml
-uses: bewuethr/shellcheck-action@v2.1
 ```
 
 and
