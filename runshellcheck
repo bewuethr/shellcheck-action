@@ -1,12 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 find . \
 	-type d -name '.git' -prune \
-	-o \
+	-or \
 	-type f \( \
 	-exec sh -c 'file --brief "$1" \
-		  | grep -qE "((POSIX|Korn|Bourne-Again) shell|/usr/bin/env k?sh) script"' _ {} \; \
-	-o \
-	-name '*.sh' -o -name '*.bash' -o -name '*.ksh' \
+		  | grep --quiet --extended-regexp \
+			"((POSIX|Korn|Bourne-Again) shell|/usr/bin/env k?sh) script"' _ {} \; \
+	-or \
+	-name '*.sh' -or -name '*.bash' -or -name '*.ksh' \
 	\) \
 	-exec shellcheck --color=always {} +
